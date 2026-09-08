@@ -1,12 +1,7 @@
+let a =100;
+let b = 200;
+let c = 0;
 
-
-function change(a,b) {
-   let c = 0;
-    c = a ;
-    a = b;
-    b=c;
-
-    return [a,b];
-}
-
-console.log(change(5,3));
+c=a ;
+a=b;
+b=c ;
