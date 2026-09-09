@@ -1,22 +1,30 @@
 let arr = [4,7,4,2,7,7];
 let reps = [];
 
+let isIncluded = false;
+
 for (let i = 0; i < arr.length; i++) {
-    if (reps.includes(arr[i])){
+    
+    for(let x = 0 ; x< reps.length;x++){
+        if(reps[x]==arr[i]){
+            isIncluded =true;
+            break;
+        }
     }
-    else{
-        for(let t = 1;t<arr.length;t++){
-                if (arr[i] == arr[t] && i!==t){
-                    reps.push(arr[i]);
+        if (!isIncluded){
+            for(let y = 1;y<arr.length;y++){
+                if (arr[i] == arr[y] && i!==y){
+                    reps[reps.length]=arr[i];
+                    isIncluded = false;
                     break;
                 }
             }
         }
-    }
+}
 console.log(reps)
 
 
-// function
+// function and methods
 function repetition(arr2){
     let reps2 =[];
     for (let i = 0; i < arr2.length; i++) {
