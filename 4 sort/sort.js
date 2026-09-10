@@ -17,4 +17,5 @@ function loopMethode(arr){
     }
     return arr;
 }
+list = [1,343,4,4,213,32,456,56];
 console.log(loopMethode(list));
